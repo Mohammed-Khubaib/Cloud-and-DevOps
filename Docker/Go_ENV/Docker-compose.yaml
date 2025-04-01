@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  go_env:
+    image: ubuntu
+    container_name: goenv
+    volumes:
+      - $HOME/Desktop/Docker/Go_ENV:/programs
+    working_dir: /programs
+    command: tail -f /dev/null  # Keeps the container running indefinitely
+
+    # Install Git and Golang during the container build process
+    # You can modify these commands based on your specific requirements
+    # or add additional installation steps as needed.
+    # You can also replace the 'apt-get' commands with 'apt' if using Ubuntu 20.04 or newer.
+    build:
+      context: .
+      dockerfile: Dockerfile
+

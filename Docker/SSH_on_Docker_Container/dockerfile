@@ -1,0 +1,11 @@
+FROM debian
+
+RUN apt-get update \
+    && apt-get install -y openssh-server \
+    && apt install -y nano \
+    && service ssh start \
+    && echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+
+EXPOSE 22
+
+CMD ["/bin/bash"]

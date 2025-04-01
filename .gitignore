@@ -1,0 +1,15 @@
+*.DS_Store
+
+/KodeKloud
+/TWS
+/Prompts
+
+# /Docker
+# /Git
+# /LetUsGo
+# /k8s
+# /Jenkins
+# /Linux
+# /Terraform
+# /ShellScripting
+# /Helm
